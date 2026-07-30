@@ -16,7 +16,8 @@ RUN pip install --no-cache-dir \
     GitPython
 
 COPY app.py /app/
+COPY .streamlit /app/.streamlit/
 
 EXPOSE 8501
 
-CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.enableCORS=false --server.enableXsrfProtection=false --theme.base="light"
+CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.enableCORS=false --server.enableXsrfProtection=false
