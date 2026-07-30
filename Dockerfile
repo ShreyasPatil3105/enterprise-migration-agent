@@ -16,7 +16,6 @@ RUN pip install --no-cache-dir \
     GitPython
 
 COPY app.py /app/
-COPY .streamlit /app/.streamlit/
 
 EXPOSE 8501
 
