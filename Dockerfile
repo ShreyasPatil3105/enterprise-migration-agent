@@ -15,8 +15,8 @@ RUN pip install --no-cache-dir \
     docker \
     GitPython
 
-COPY main.py app.py /app/
+COPY app.py /app/
 
 EXPOSE 8501
 
-CMD ["python", "main.py"]
+CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.enableCORS=false --server.enableXsrfProtection=false
