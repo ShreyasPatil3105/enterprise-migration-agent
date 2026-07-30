@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: enterprise-migration-agent
+    env: docker
+    plan: free
+    region: ohio
+    ports:
+      - port: 8501
+        protocol: http
+    envVars:
+      - key: PORT
+        value: 8501
